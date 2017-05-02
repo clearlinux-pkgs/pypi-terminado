@@ -4,7 +4,7 @@
 #
 Name     : terminado
 Version  : 0.6
-Release  : 1
+Release  : 2
 URL      : https://pypi.python.org/packages/58/59/aabe84fce2f45da10165435cec204d982863e176f6849a4a4fe2652a20a8/terminado-0.6.tar.gz
 Source0  : https://pypi.python.org/packages/58/59/aabe84fce2f45da10165435cec204d982863e176f6849a4a4fe2652a20a8/terminado-0.6.tar.gz
 Summary  : Terminals served to term.js using Tornado websockets
