@@ -4,13 +4,15 @@
 #
 Name     : terminado
 Version  : 0.6
-Release  : 2
-URL      : https://pypi.python.org/packages/58/59/aabe84fce2f45da10165435cec204d982863e176f6849a4a4fe2652a20a8/terminado-0.6.tar.gz
-Source0  : https://pypi.python.org/packages/58/59/aabe84fce2f45da10165435cec204d982863e176f6849a4a4fe2652a20a8/terminado-0.6.tar.gz
+Release  : 3
+URL      : http://pypi.debian.net/terminado/terminado-0.6.tar.gz
+Source0  : http://pypi.debian.net/terminado/terminado-0.6.tar.gz
 Summary  : Terminals served to term.js using Tornado websockets
 Group    : Development/Tools
 License  : BSD-3-Clause
 Requires: terminado-python
+Requires: ptyprocess
+Requires: tornado
 BuildRequires : pbr
 BuildRequires : pip
 BuildRequires : ptyprocess
@@ -36,20 +38,27 @@ python components for the terminado package.
 %setup -q -n terminado-0.6
 
 %build
+export http_proxy=http://127.0.0.1:9/
+export https_proxy=http://127.0.0.1:9/
+export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1485738394
+export SOURCE_DATE_EPOCH=1503081715
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1485738394
+export SOURCE_DATE_EPOCH=1503081715
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
+echo ----[ mark ]----
+cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
+echo ----[ mark ]----
 
 %files
 %defattr(-,root,root,-)
 
 %files python
 %defattr(-,root,root,-)
-/usr/lib/python*/*
+/usr/lib/python2*/*
+/usr/lib/python3*/*
