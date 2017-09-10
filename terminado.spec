@@ -4,12 +4,13 @@
 #
 Name     : terminado
 Version  : 0.6
-Release  : 3
+Release  : 4
 URL      : http://pypi.debian.net/terminado/terminado-0.6.tar.gz
 Source0  : http://pypi.debian.net/terminado/terminado-0.6.tar.gz
 Summary  : Terminals served to term.js using Tornado websockets
 Group    : Development/Tools
 License  : BSD-3-Clause
+Requires: terminado-legacypython
 Requires: terminado-python
 Requires: ptyprocess
 Requires: tornado
@@ -26,9 +27,18 @@ This is a `Tornado <http://tornadoweb.org/>`_ websocket backend for the
 `term.js <https://github.com/chjj/term.js>`_ Javascript terminal emulator
 library.
 
+%package legacypython
+Summary: legacypython components for the terminado package.
+Group: Default
+
+%description legacypython
+legacypython components for the terminado package.
+
+
 %package python
 Summary: python components for the terminado package.
 Group: Default
+Requires: terminado-legacypython
 
 %description python
 python components for the terminado package.
@@ -42,12 +52,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1503081715
+export SOURCE_DATE_EPOCH=1505072226
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1503081715
+export SOURCE_DATE_EPOCH=1505072226
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
@@ -58,7 +68,10 @@ echo ----[ mark ]----
 %files
 %defattr(-,root,root,-)
 
-%files python
+%files legacypython
 %defattr(-,root,root,-)
 /usr/lib/python2*/*
+
+%files python
+%defattr(-,root,root,-)
 /usr/lib/python3*/*
