@@ -4,12 +4,13 @@
 #
 Name     : terminado
 Version  : 0.6
-Release  : 5
+Release  : 6
 URL      : http://pypi.debian.net/terminado/terminado-0.6.tar.gz
 Source0  : http://pypi.debian.net/terminado/terminado-0.6.tar.gz
 Summary  : Terminals served to term.js using Tornado websockets
 Group    : Development/Tools
 License  : BSD-3-Clause
+Requires: terminado-python3
 Requires: terminado-python
 Requires: ptyprocess
 Requires: tornado
@@ -29,9 +30,19 @@ library.
 %package python
 Summary: python components for the terminado package.
 Group: Default
+Requires: terminado-python3
 
 %description python
 python components for the terminado package.
+
+
+%package python3
+Summary: python3 components for the terminado package.
+Group: Default
+Requires: python3-core
+
+%description python3
+python3 components for the terminado package.
 
 
 %prep
@@ -42,7 +53,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1505099821
+export SOURCE_DATE_EPOCH=1507179772
 python3 setup.py build -b py3
 
 %install
@@ -56,5 +67,8 @@ echo ----[ mark ]----
 %defattr(-,root,root,-)
 
 %files python
+%defattr(-,root,root,-)
+
+%files python3
 %defattr(-,root,root,-)
 /usr/lib/python3*/*
