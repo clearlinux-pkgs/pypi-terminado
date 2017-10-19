@@ -4,7 +4,7 @@
 #
 Name     : terminado
 Version  : 0.6
-Release  : 6
+Release  : 7
 URL      : http://pypi.debian.net/terminado/terminado-0.6.tar.gz
 Source0  : http://pypi.debian.net/terminado/terminado-0.6.tar.gz
 Summary  : Terminals served to term.js using Tornado websockets
