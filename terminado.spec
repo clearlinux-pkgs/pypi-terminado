@@ -4,7 +4,7 @@
 #
 Name     : terminado
 Version  : 0.8.2
-Release  : 21
+Release  : 22
 URL      : https://files.pythonhosted.org/packages/ae/fc/f5c7c36ac0da236078a26da7dce5748db45c8273cd551232ae01b26043b3/terminado-0.8.2.tar.gz
 Source0  : https://files.pythonhosted.org/packages/ae/fc/f5c7c36ac0da236078a26da7dce5748db45c8273cd551232ae01b26043b3/terminado-0.8.2.tar.gz
 Summary  : Terminals served to xterm.js using Tornado websockets
