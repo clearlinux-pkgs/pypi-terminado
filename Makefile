@@ -1,5 +1,5 @@
 PKG_NAME := terminado
-URL = https://files.pythonhosted.org/packages/ae/fc/f5c7c36ac0da236078a26da7dce5748db45c8273cd551232ae01b26043b3/terminado-0.8.2.tar.gz
+URL = https://files.pythonhosted.org/packages/13/5b/57e995382718d176aba6168632bd15cf5371a7b1205c83a7e4aae0bc6c2e/terminado-0.8.3.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
