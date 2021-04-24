@@ -4,7 +4,7 @@
 #
 Name     : terminado
 Version  : 0.9.2
-Release  : 34
+Release  : 35
 URL      : https://files.pythonhosted.org/packages/ec/5b/89a4611dd76bc15a692232716ce961cba6268137ab8b2f349635629a1a2d/terminado-0.9.2.tar.gz
 Source0  : https://files.pythonhosted.org/packages/ec/5b/89a4611dd76bc15a692232716ce961cba6268137ab8b2f349635629a1a2d/terminado-0.9.2.tar.gz
 Summary  : Tornado websocket backend for the Xterm.js Javascript terminal emulator library.
