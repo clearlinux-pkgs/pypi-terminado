@@ -4,7 +4,7 @@
 #
 Name     : terminado
 Version  : 0.12.1
-Release  : 49
+Release  : 50
 URL      : https://files.pythonhosted.org/packages/7a/82/97a3b275b44b031eba1e27e136993464e670821aa4616a9dfaba0c2b4e8f/terminado-0.12.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/7a/82/97a3b275b44b031eba1e27e136993464e670821aa4616a9dfaba0c2b4e8f/terminado-0.12.1.tar.gz
 Summary  : Tornado websocket backend for the Xterm.js Javascript terminal emulator library.
@@ -13,10 +13,11 @@ License  : BSD-2-Clause BSD-3-Clause
 Requires: terminado-license = %{version}-%{release}
 Requires: terminado-python = %{version}-%{release}
 Requires: terminado-python3 = %{version}-%{release}
-Requires: ptyprocess
 Requires: tornado
 BuildRequires : buildreq-distutils3
-BuildRequires : ptyprocess
+BuildRequires : pypi(setuptools)
+BuildRequires : pypi(tornado)
+BuildRequires : pypi(wheel)
 BuildRequires : tornado
 
 %description
@@ -62,7 +63,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1631216541
+export SOURCE_DATE_EPOCH=1641424367
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
