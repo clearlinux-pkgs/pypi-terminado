@@ -4,7 +4,7 @@
 #
 Name     : pypi-terminado
 Version  : 0.12.1
-Release  : 52
+Release  : 53
 URL      : https://files.pythonhosted.org/packages/7a/82/97a3b275b44b031eba1e27e136993464e670821aa4616a9dfaba0c2b4e8f/terminado-0.12.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/7a/82/97a3b275b44b031eba1e27e136993464e670821aa4616a9dfaba0c2b4e8f/terminado-0.12.1.tar.gz
 Summary  : Tornado websocket backend for the Xterm.js Javascript terminal emulator library.
@@ -13,12 +13,11 @@ License  : BSD-2-Clause
 Requires: pypi-terminado-license = %{version}-%{release}
 Requires: pypi-terminado-python = %{version}-%{release}
 Requires: pypi-terminado-python3 = %{version}-%{release}
-Requires: tornado
+Requires: pypi(tornado)
 BuildRequires : buildreq-distutils3
 BuildRequires : pypi(setuptools)
 BuildRequires : pypi(tornado)
 BuildRequires : pypi(wheel)
-BuildRequires : tornado
 
 %description
 This is a `Tornado <http://tornadoweb.org/>`_ websocket backend for the
@@ -63,7 +62,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1641516626
+export SOURCE_DATE_EPOCH=1641603668
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
