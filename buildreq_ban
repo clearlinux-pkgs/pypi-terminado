@@ -2,3 +2,4 @@
 # undesirable. One entry per line, no whitespace.
 pywinpty (
 tornado (
+pypi(pywinpty)
