@@ -7,7 +7,7 @@
 #
 Name     : pypi-terminado
 Version  : 0.18.1
-Release  : 70
+Release  : 71
 URL      : https://files.pythonhosted.org/packages/8a/11/965c6fd8e5cc254f1fe142d547387da17a8ebfd75a3455f637c663fb38a0/terminado-0.18.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/8a/11/965c6fd8e5cc254f1fe142d547387da17a8ebfd75a3455f637c663fb38a0/terminado-0.18.1.tar.gz
 Summary  : Tornado websocket backend for the Xterm.js Javascript terminal emulator library.
